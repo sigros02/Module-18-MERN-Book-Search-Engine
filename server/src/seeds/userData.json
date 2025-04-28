@@ -1,0 +1,47 @@
+[
+  {
+    "username": "Brian Kernighan",
+    "email": "bkernighan@techfriends.dev",
+    "password": "password01",
+    "savedBooks": [
+      {
+        "authors": ["Brian Kernighan", "Dennis Ritchie"],
+        "description": "The C Programming Language is a computer programming book written by Brian Kernighan and Dennis Ritchie. It is the de facto standard for the C programming language.",
+        "bookId": "1",
+        "image": "https://example.com/image1.jpg",
+        "link": "https://example.com/book1",
+        "title": "The C Programming Language"
+      }
+    ]
+  },
+  {
+    "username": "Linus Torvalds",
+    "email": "test2@email.com",
+    "password": "password02",
+    "savedBooks": [
+      {
+        "authors": ["Linus Torvalds"],
+        "description": "Just for fun, I wrote a small program that generates random numbers. It is a simple program, but it is a good example of how to use the C programming language.",
+        "bookId": "2",
+        "image": "https://example.com/image2.jpg",
+        "link": "https://example.com/book2",
+        "title": "Random Number Generator"
+      }
+    ]
+  },
+  {
+    "username": "Ada Lovelace",
+    "email": "ada@email3.com",
+    "password": "password03",
+    "savedBooks": [
+      {
+        "authors": ["Ada Lovelace"],
+        "description": "Ada Lovelace is considered the first computer programmer. She wrote the first algorithm intended for implementation on Charles Babbage's Analytical Engine.",
+        "bookId": "3",
+        "image": "https://example.com/image3.jpg",
+        "link": "https://example.com/book3",
+        "title": "Notes on the Analytical Engine"
+      }
+    ]
+  }
+]
