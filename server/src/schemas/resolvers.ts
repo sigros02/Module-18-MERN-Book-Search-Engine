@@ -10,8 +10,8 @@ interface User {
 }
 
 /*
-/ ** All user routes that need to be refactored to use GraphQL **
-/
+ / ** All user routes that need to be refactored to use GraphQL **
+ /
 // get a single user by either their id or their username
 // create a user, sign a token, and send it back (to client/src/components/SignUpForm.js)
 // login a user, sign a token, and send it back (to client/src/components/LoginForm.js)
@@ -21,13 +21,25 @@ interface User {
 // remove a book from `savedBooks`
 */
 
+//   createUser,
+//   getSingleUser,
+//   saveBook,
+//   deleteBook,
+//   login,
+
 const resolvers = {
   // get a single user by either their id or their username
   Query: {
-    user: async (_parent: any, { id }: { id: string }) => {
-      const foundUser = await User.findById(id).populate("savedBooks");
+    user: async (
+      _parent: any,
+      { id, username }: { id?: string; username?: string }
+    ) => {
+      const foundUser = await User.findOne({
+        $or: [{ _id: id }, { username: username }],
+      }).populate("savedBooks");
+
       if (!foundUser) {
-        throw new Error("Cannot find a user with this id!");
+        throw new Error("Cannot find a user with this id or username!");
       }
       return foundUser;
     },
