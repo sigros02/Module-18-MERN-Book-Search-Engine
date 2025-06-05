@@ -18,21 +18,5 @@ export const GET_ME = gql`
   }
 `;
 
-export const GET_USER = gql`
-  query User($id: ID, $username: String) {
-    user(id: $id, username: $username) {
-      _id
-      username
-      email
-      savedBooks {
-        bookId
-        authors
-        description
-        title
-        image
-        link
-      }
-    }
-  }
-`;
+
 
