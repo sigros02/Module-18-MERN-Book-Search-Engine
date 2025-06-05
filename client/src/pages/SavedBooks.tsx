@@ -8,7 +8,10 @@ import { removeBookId } from "../utils/localStorage";
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
-  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+  const [removeBook, { error }] = useMutation(REMOVE_BOOK, {
+    // Refetch the GET_ME query after mutation
+    refetchQueries: [{ query: GET_ME }],
+  });
 
   const userData = data?.me || {};
 
